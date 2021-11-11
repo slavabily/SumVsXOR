@@ -8,13 +8,14 @@
 import Foundation
 
 func sumXor(n: Int) -> Int {
-    let f = 5
-    let h = 3
-    let k = f ^ h
-    print(k)
-     
-    return 0
+    var i = 0
+    for x in 0...n {
+        if n + x == n ^ x {
+            i += 1
+        }
+    } 
+    return i
 }
 
-print(sumXor(n: 4))
+print(sumXor(n: 5))
 
